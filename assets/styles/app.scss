@@ -1,10 +1,11 @@
-@import "~bootstrap/scss/bootstrap";
 $back: #D0D2CF;
-$second: #0E467E;
+$nav: #0E467E;
 $third: #077EB2;
 $fourth: #299BC2;
 $fifth: #69C1CD;
 $text: #031113;
+
+@import "~bootstrap/scss/bootstrap";
 
 body {
     background-color: $back;
