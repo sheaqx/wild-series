@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category #{{ category.name }}
+{% endblock %}
+
+{% block body %}
+	<div class="category">
+		<h1>Série d'
+			{{ category.name }}</h1>
+		{% for program in programs %}
+			<div class="category-body">
+				<h1 class="mt-0">{{ program.title }}</h1>
+				<img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+				<p>{{ program.synopsis }}</p>
+			</div>
+		</div>
+	{% else %}
+		<div>
+			<h2>Aucune série trouvée.</h2>
+		{% endfor %}
+
+		<a href="{{ path('category_index') }}">
+			Retour à la liste des catégories
+		</a>
+	{% endblock %}
