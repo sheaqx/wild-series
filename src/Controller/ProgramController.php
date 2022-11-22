@@ -41,8 +41,8 @@ class ProgramController extends AbstractController
     #[Route('/{programId}/season/{seasonId}', name: 'season_show')]
     public function showSeason(int $programId, int $seasonId, ProgramRepository $programRepository, SeasonRepository $seasonRepository)
     {
-        $program = $programRepository->findOneById(['programId' => $programId]);
-        $seasons = $seasonRepository->findOneById(['seasonId' => $seasonId]);
+        $program = $programRepository->findOneBy(['programId' => $programId]);
+        $seasons = $seasonRepository->findOneBy(['seasonId' => $seasonId]);
         // $episodes = $episodeRepository->findBy(['season' => $season], ['number' => 'ASC']);
 
         return $this->render('program/season_show.html.twig', ['program' => $program, 'season' => $seasons]);
