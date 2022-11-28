@@ -13,6 +13,7 @@
 		{% for episode in episodes %}
 			<h2>Épisodes n°{{episode.number}}:
 				{{episode.title}}</h2>
+			<p>{{episode.synopsis}}</p>
 		{% endfor %}
 	</div>
 	<a href="{{ path("program_show", { id: program.id }) }}">Retour vers la série</a>
