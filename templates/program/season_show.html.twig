@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 	<div class="media">
-
 		<h1 class="mt-0">Saison #{{ season.number }}
 			de
 			{{ program.title }}</h1>
@@ -15,7 +14,8 @@
 			<h2>Épisodes n°{{episode.number}}:
 				{{episode.title}}</h2>
 		{% endfor %}
-
 	</div>
-</div></div><a href="{{ path('program_index') }}">
-Retour à la liste des programmes</a>{% endblock %}
+	<a href="{{ path("program_show", { id: program.id }) }}">Retour vers la série</a>
+	<a href="{{ path('program_index') }}">
+		Retour à la liste des programmes</a>
+{% endblock %}
